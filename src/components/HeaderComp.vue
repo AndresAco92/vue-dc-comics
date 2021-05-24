@@ -5,17 +5,17 @@
       <a href="/">
         <img src="../assets/img/dc-logo.png" alt="logo-dc">
       </a>
-    <ul>
-      <li v-for="(link, index) in links" 
-          :key= "index"
-      >
-        <a :href="link.url"
-           :class="{'active': link.current}"
+      <ul>
+        <li v-for="(link, index) in links" 
+            :key= "index"
         >
-          {{link.text}}
-        </a>
-      </li> 
-    </ul>
+          <a :href="link.url"
+             :class="{'active': link.current}"
+          >
+            {{link.text}}
+          </a>
+        </li> 
+      </ul>
     </div>
   </header>
 
@@ -89,14 +89,17 @@ export default {
     width: 100%;
     height: 120px;
     .box{
-      width: 66%;
+      width: 67%;
       height: 100%;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: center;
       img{
-        width: 80px;        
+        width: 80px;
+        &:hover{
+          transform: scale(1.1);
+        }        
       }
       ul{
         width: 60%;
